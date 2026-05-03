@@ -8,7 +8,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     // Assuming backend runs on port 3001
-    const newSocket = io('http://localhost:3001');
+    const newSocket = io('https://escaperoom-backend-fjm7.onrender.com');
     setSocket(newSocket);
     return () => newSocket.close();
   }, []);
