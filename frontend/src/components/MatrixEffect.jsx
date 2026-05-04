@@ -87,7 +87,7 @@ const MatrixEffect = ({ textOverlay, theme = 'breach', customColor = '#00ff00' }
   }
 
   return (
-    <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
+    <div className={`fixed inset-0 pointer-events-none flex items-center justify-center ${textOverlay ? 'z-50' : 'z-0 opacity-40 mix-blend-screen'}`}>
       <canvas ref={canvasRef} className="absolute inset-0" />
       {textOverlay && (
         <div className={`relative z-10 p-8 bg-black border text-center ${getThemeTextClass()}`}>
