@@ -97,6 +97,7 @@ const Lobby = () => {
                     <option value="matrix">Digital Rain (Matrix)</option>
                     <option value="radar">Network Radar</option>
                     <option value="glitch">Particle Glitch</option>
+                    <option value="none">None (Blank)</option>
                   </select>
                 </div>
               </>
