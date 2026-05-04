@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { SocketProvider } from './context/SocketContext';
 import { SettingsProvider, useSettings } from './context/SettingsContext';
 import Lobby from './components/Lobby';
@@ -23,13 +23,13 @@ function App() {
   return (
     <SettingsProvider>
       <SocketProvider>
-        <BrowserRouter>
+        <HashRouter>
           <GlobalControls />
           <Routes>
             <Route path="/" element={<Lobby />} />
             <Route path="/room/:roomId" element={<RoomPage />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </SocketProvider>
     </SettingsProvider>
   );
